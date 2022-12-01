@@ -18,8 +18,12 @@ public class Main {
          *
          * 3. Подключиться к GitHub, залить программу в созданный репозиторий.
          */
+        System.out.println("ЗАДАЧА №1_Первая программа");
 
         System.out.println("Hello World");
+        System.out.println(" ");
+        System.out.println("*************************");
+        System.out.println(" ");
 
         /** Задача №2_Типы данных
             Создание переменных:
@@ -27,8 +31,22 @@ public class Main {
             2. Создайте переменную целочисленного типа с наименьшим диапазоном чисел. Присвойте ей наибольшее возможное значение
         */
 
+        System.out.println("ЗАДАЧА №2_Типы данных");
+
+        System.out.println("Переменная с плавающей точкой с наибольшим диапазоном чисел");
+
+        System.out.println("Это: " + "double num = 1234567.12345");
+
+        System.out.println("Переменная целочисленного типа с наименьшим диапазоном чисел");
+
+        System.out.println("Это: " + "byte a = 127");
+
         double num = 1234567.12345;
         byte a = 127;
+
+        System.out.println(" ");
+        System.out.println("*************************");
+        System.out.println(" ");
 
         /** Задача №3_Массивы
          *Выполните следующие действия с массивом:
@@ -42,12 +60,17 @@ public class Main {
          * Примечание: Для получения последнего и среднего элементов в массиве используйте свойство length.
          */
 
+        System.out.println("ЗАДАЧА №3_Массивы");
+
         int[] array1 = {2,5,6,8,7};
-        int a = array1[0];
+        int d = array1[0];
         array1 [0] = array1[array1.length - 1];
-        array1[array1.length-1] = a;
+        array1[array1.length-1] = d;
         System.out.println("Сумма первого и среднего элементов =  " + (array1[0] + array1[array1.length-3]));
 
+        System.out.println(" ");
+        System.out.println("*************************");
+        System.out.println(" ");
 
         }
 }
