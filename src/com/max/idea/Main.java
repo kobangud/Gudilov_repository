@@ -1,12 +1,15 @@
 package com.max.idea;
 
 
+import java.io.IOException;
 import java.util.Arrays;
+import java.util.Scanner;
+
 
 public class Main {
 
 
-    public static void main(String [] args ) {
+    public static void main(String [] args ) throws IOException {
 
 
         /** Задача №1_Первая программа
@@ -71,6 +74,45 @@ public class Main {
         System.out.println(" ");
         System.out.println("*************************");
         System.out.println(" ");
+
+        /** Задача №4_Операторы
+         * 1. Ввести три числа с клавиатуры x, y, z
+         *
+         * 2. Найти и вывести в консоль среднее арифметическое этих чисел
+         *
+         * 3. Разделить среднее арифметическое на 2 и округлить в меньшую сторону
+         *
+         * 4. Если полученное число больше 3, то вывести на экран сообщение "Программа выполнена корректно"
+
+         */
+
+        System.out.println("ЗАДАЧА №4_Операторы");
+        Scanner in = new Scanner(System.in);
+        int x,y,z;
+        int srAref;
+
+        System.out.println("Введите поочередно три произвольных числа");
+
+        x =  in.nextInt();
+        y =  in.nextInt();
+        z =  in.nextInt();
+
+        System.out.println("Вы ввели: " + x +" ," + y +" ,"+ z );
+        srAref = (x+y+z)/3;
+
+
+        System.out.println("среднее арифметическое этих чисел");
+        System.out.print("Результат: ");
+        System.out.println((x+y+z)/3);
+
+       if ((srAref/2) > 3) {
+            System.out.println("Программа выполнена корректно");
+
+        }
+        System.out.println(" ");
+        System.out.println("*************************");
+        System.out.println(" ");
+
 
         }
 }
