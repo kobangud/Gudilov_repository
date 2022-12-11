@@ -446,7 +446,7 @@ public class Main {
 //        Stroka.contains("Java");  проверяет, есть ли в строке данное выражение и возвращает истину или ложь
 //        Stroka.startsWith("I like");
 //        Stroka.endsWith("!!!");
-        if (Stroka.contains("Java") && Stroka.startsWith("I like")&&Stroka.endsWith("!!!")){
+        if (Stroka.contains("Java") && Stroka.startsWith("I like") && Stroka.endsWith("!!!")){
             System.out.println(Stroka.toUpperCase()); //переводит в строке все символы в верхний регистр
         }
         //далее на печать меняем символы "a" на  "о" оператором replace в части строки от до (получим слово Java)
@@ -627,5 +627,53 @@ public class Main {
             }
         }
 
+        System.out.println("\n*************************\n");
+
+        /** Итоговая задача № 3
+         Инструкция
+         Напишите программу, где пользователь вводит сначала количество строк n,
+         затем сами строки.
+         Среди данных строк найти строку с максимальным количеством различных символов.
+         Если таких строк будет много, то вывести первую.
+
+         Пример для теста работы программы:
+
+         Количество строк: 3
+         Строка 1: привет
+         Строка 2: анализ
+         Строка 3: 111111111111
+         Ответ: привет
+         */
+
+        System.out.println("Итоговая задача № 3\n");
+
+        Scanner Skaner = new Scanner(System.in);
+        int l = 0;
+        int s;
+        String slovo = "";
+        System.out.println("Введите количество строк массива");
+        String stroki = Skaner.nextLine();
+        String[] MassStroka = new String[Integer.parseInt(stroki)];
+        System.out.println("Введите аргументы массива");
+        for (int i = 0; i < MassStroka.length; i++) {
+
+            MassStroka[i] = Skaner.nextLine();
+        }
+        for (int i = 0; i < MassStroka.length; i++) {
+
+            System.out.println("Строка " + (i + 1) + ": " + MassStroka[i]);
+        }
+        for (int i = 0; i < MassStroka.length; i++) {
+            s = (int) MassStroka[i].chars().distinct().count();
+
+            if (s > l) {
+                slovo = MassStroka[i];
+                l = s;
+            }
+        }
+        System.out.println("Строка с максимальным количеством различных символов " + slovo);
+        }
+
+
     }
-}
+
